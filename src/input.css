@@ -33,3 +33,4 @@
 .pricing-item{
     @apply border border-gray-300 flex flex-col divide-y hover:shadow-2xl
 }
+[x-cloak] { display: none !important; }
