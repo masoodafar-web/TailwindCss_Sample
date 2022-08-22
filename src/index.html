@@ -15,7 +15,7 @@
 <body class="font-sans text-base " 
  x-data="{open:false,openMenu:false,dropdownOpen:false,modalOpen:false,inputName:'Hello'}">
     <!-- Modal -->
-    <div x-cloak x-show="modalOpen" x-transition class="fixed inset-0 bg-teal-200/30 z-[101] flex justify-center items-center">
+    <div x-show="modalOpen" x-transition class="fixed inset-0 bg-teal-200/30 z-[101] flex justify-center items-center">
         <div id="invait_modal" x-on:click.away="modalOpen=false"
             class="bg-white w-128 min-h-[12rem] rounded-md px-4 py-3 space-y-5 shadow-lg shadow-slate-300">
             <div id="modal_header" class="flex items-center justify-between h-10">
