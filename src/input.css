@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+#navul>li{
+    @apply py-2 px-3 hover:bg-white hover:text-black hover:cursor-pointer
+}
+/* #navul>li:first-child{
+    @apply bg-[#009688] hover:bg-gray-400 
+}
+#navul>li:last-child{
+    @apply bg-[#009688] hover:bg-gray-400 
+} */
+.our-team{
+    @apply text-center flex flex-col items-center gap-y-3
+}
+.our-team>img{
+    @apply rounded-full h-36 w-36 hover:opacity-70
+}
+.our-work-items{
+    @apply bg-white rounded-lg overflow-hidden
+}
+.our-work-items>div{
+    @apply p-4 flex flex-col gap-y-3
+}
+.my-btn-tem{
+    @apply text-white bg-[#009688]
+}
+.my-btn-tem:hover{
+    @apply bg-gray-400 text-black cursor-pointer
+}
+.pricing-item{
+    @apply border border-gray-300 flex flex-col divide-y hover:shadow-2xl
+}
