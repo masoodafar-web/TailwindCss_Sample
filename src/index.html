@@ -15,7 +15,7 @@
 <body class="font-sans text-base" 
  x-data="{open:false,openMenu:false,dropdownOpen:false,modalOpen:false,inputName:'Hello'}">
     <!-- Modal -->
-    <div x-show="modalOpen" x-transition class="fixed inset-0 bg-teal-200/30 z-[101] flex justify-center items-center">
+    <div x-cloak x-show="modalOpen" x-transition class="fixed inset-0 bg-teal-200/30 z-[101] flex justify-center items-center">
         <div id="invait_modal" x-on:click.away="modalOpen=false"
             class="bg-white w-128 min-h-[12rem] rounded-md px-4 py-3 space-y-5 shadow-lg shadow-slate-300">
             <div id="modal_header" class="flex items-center justify-between h-10">
@@ -95,10 +95,10 @@
             </div>
         </div>
     </div>
-
+ 
     <!-- sidbar -->
-    <!--x-show="open" x-bind:class="open?'w-96':'w-0'"   -->
-    <div x-cloak  x-show="open" x-on:click.away="open=false" x-transition:enter="width duration-700"
+    <!-- x-show="open" x-bind:class="open?'w-96':'w-0'"   -->
+    <div x-cloak x-show="open" x-on:click.away="open=false" x-transition:enter="width duration-700"
         x-transition:enter-start="w-0" x-transition:enter-end="w-96" x-transition:leave="width duration-700"
         x-transition:leave-start="w-96" x-transition:leave-end="w-0"
         class="fixed inset-y-0 left-0 w-96 bg-indigo-300 z-[100] overflow-hidden">
@@ -169,7 +169,7 @@
                             d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
                             clip-rule="evenodd" />
                     </svg>
-                    <div x-cloak x-show="dropdownOpen" x-transition
+                    <div  x-cloak x-show="dropdownOpen" x-transition
                         class="absolute  bg-white top-10 left-0 w-48   p-2 space-y-2">
                         <div class="hover:bg-teal-700 hover:text-white p-2">one</div>
                         <div class="hover:bg-teal-700 hover:text-white p-2">two</div>
