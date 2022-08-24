@@ -35,3 +35,7 @@
 }
 
 [x-cloak] { display: none !important; }
+
+.my-modal{
+    display: none;
+}

@@ -1287,6 +1287,10 @@ video {
   display: none !important;
 }
 
+.my-modal{
+  display: none;
+}
+
 .hover\:cursor-pointer:hover {
   cursor: pointer;
 }
