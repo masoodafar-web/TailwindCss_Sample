@@ -15,7 +15,7 @@
 <body class="font-sans text-base" 
  x-data="{open:false,openMenu:false,dropdownOpen:false,modalOpen:false,inputName:'Hello'}">
     <!-- Modal -->
-    <div x-show="modalOpen" x-transition class="fixed inset-0 bg-teal-200/30 z-[101] flex justify-center items-center">
+    <div x-cloak  x-show="modalOpen" x-transition class="fixed inset-0 bg-teal-200/30 z-[101] flex justify-center items-center">
         <div id="invait_modal" x-on:click.away="modalOpen=false"
             class="bg-white w-128 min-h-[12rem] rounded-md px-4 py-3 space-y-5 shadow-lg shadow-slate-300">
             <div id="modal_header" class="flex items-center justify-between h-10">
@@ -98,10 +98,10 @@
 
     <!-- sidbar -->
     <!--x-show="open" x-bind:class="open?'w-96':'w-0'"   -->
-    <div x-cloak  x-show="open" x-on:click.away="open=false" x-transition:enter="width duration-700"
-        x-transition:enter-start="w-0" x-transition:enter-end="w-96" x-transition:leave="width duration-700"
-        x-transition:leave-start="w-96" x-transition:leave-end="w-0"
-        class="fixed inset-y-0 left-0 w-96 bg-indigo-300 z-[100] overflow-hidden">
+    <div x-cloak  x-show="open" x-on:click.away="open=false" x-transition:enter="transition-transform duration-700"
+        x-transition:enter-start="-translate-x-full" x-transition:enter-end="translate-x-0" x-transition:leave="transition-transform duration-700"
+        x-transition:leave-start="translate-x-0" x-transition:leave-end="-translate-x-full"
+        class="fixed inset-y-0 w-96 bg-indigo-300 z-[100] overflow-hidden ">
         <div class="px-4 py-2">
             <div id="head" class="flex justify-between items-center">
                 <h2 class="text-2xl text-black font-bold ">Menu</h2>
@@ -112,7 +112,7 @@
                         clip-rule="evenodd" />
                 </svg>
             </div>
-            <div id="content" class="my-10" x-html="(await axios.get('/src/Menu.html')).data">
+            <div id="content" class="my-10 " x-html="(await axios.get('/src/Menu.html')).data">
                
             </div>
             <!-- <div id="content" class="my-10">
